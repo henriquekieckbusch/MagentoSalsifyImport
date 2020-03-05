@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="Henrique" sortOrder="999" translate="label">
+			<label>Henrique</label>
+		</tab>
+		<section id="salsify" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Salsify</label>
+			<tab>Henrique</tab>
+			<resource>Henrique_Salsimport::config_Henrique_salsimport</resource>
+			<group id="salsify_import" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Salsify files inside directory import config</label>
+				<field id="salsify_import_enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Salsify Import enabled?</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="salsify_import_path" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>The directory (path) to check for files</label>
+					<comment/>
+				</field>
+				<field id="salsify_import_image_attributes" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>List of image attributes (1 per line)</label>
+					<comment/>
+				</field>
+				<field id="salsify_import_image_model" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="textarea">
+					<label>Model (1 per line: salsify,magento)</label>
+					<comment/>
+				</field>
+				<field id="salsify_mode_insert" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Create new product if necessary?</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment/>
+				</field>
+				<field id="salsify_mode_update" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Update product if necessary? </label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment/>
+				</field>
+				<field id="salsify_import_csv_url" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>URL to download the CSV to import (if empty, it will list the directory )</label>
+					<comment/>
+				</field>
+                <group id="log" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="100" translate="label">
+                    <label>Log</label>
+                    <field id="enabled" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10"
+                           translate="label" type="select">
+                        <label>Log status</label>
+                        <comment>Enable to log every import</comment>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="max_days" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="110"
+                           translate="label" type="text">
+                        <label>Log days</label>
+                        <comment>Enter max days to keep logs</comment>
+                        <tooltip>If empty will keep save for ever</tooltip>
+                    </field>
+                </group>
+            </group>
+		</section>
+	</system>
+</config>

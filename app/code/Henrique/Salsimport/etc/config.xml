@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<salsify>
+			<salsify_import>
+				<salsify_import_enabled>1</salsify_import_enabled>
+				<salsify_import_cronjob>*/30 * * * *</salsify_import_cronjob>
+				<salsify_import_path>/var/</salsify_import_path>
+				<salsify_import_image_attributes>before_image
+after_image
+tooltips_image</salsify_import_image_attributes>
+				<salsify_import_image_model>ITEM CODE,sku
+DESCRIPTION,name
+ITEM LENGTH (Inches),ts_dimensions_length
+ITEM WIDTH (Inches),ts_dimensions_width
+ITEM HEIGHT (Inches),ts_dimensions_height
+ITEM WEIGHT (g),weight
+USA Before Image - en-US,before_image
+USA After Image - en-US,after_image
+PRIMARY IMAGE,primary_image
+SECONDARY IMAGES,secondary_image
+US MODEL IMAGES,gallery1
+LIFESTYLE IMAGES,gallery2
+hover_image  - en-US,tooltips_image
+hover_image  - en-US,hover_image
+HOW TO USE - EN - US - en-US,tool_tips
+TOOL CARE -EN-US - en-US,tooltips_extended
+KEY BENEFITS -EN-US - en-US,key_benefits
+SEO META TITLE- EN - US,meta_title
+SEO META DESCRIPTION- EN - US,meta_description
+COLOR FAMILY,color_family</salsify_import_image_model>
+				<salsify_mode_insert>1</salsify_mode_insert>
+				<salsify_mode_update>1</salsify_mode_update>
+				<salsify_import_csv_url/>
+			</salsify_import>
+		</salsify>
+	</default>
+</config>

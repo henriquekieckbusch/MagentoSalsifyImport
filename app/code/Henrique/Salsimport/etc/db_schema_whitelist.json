@@ -1,0 +1,13 @@
+{
+    "Henrique_salsify_log": {
+        "column": {
+            "entity_id": true,
+            "file_name": true,
+            "serialized_data": true,
+            "created_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

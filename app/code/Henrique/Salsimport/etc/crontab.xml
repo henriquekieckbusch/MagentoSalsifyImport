@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+	<group id="default">
+		<job instance="Henrique\Salsimport\Cron\Import" method="execute" name="salsify_import">
+			<schedule>00 00 * * *</schedule>
+		</job>
+        <job instance="Henrique\Salsimport\Cron\CleanLogs" method="execute" name="salsify_clean_logs">
+            <schedule>30 00 * * *</schedule>
+        </job>
+	</group>
+</config>

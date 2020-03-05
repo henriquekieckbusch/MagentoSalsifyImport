@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Henrique_Salsimport::Henrique_salsimport" sortOrder="10" title="Henrique salsimport">
+					<resource id="Henrique_Salsimport::index_index" sortOrder="10" title="index index"/>
+				</resource>
+				<resource id="Magento_Backend::stores">
+					<resource id="Magento_Backend::stores_settings">
+						<resource id="Magento_Config::config">
+							<resource id="Henrique_Salsimport::config_Henrique_salsimport" title="salsify"/>
+							<resource id="Henrique_Salsimport::logs" title="Salsify Logs"/>
+						</resource>
+					</resource>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

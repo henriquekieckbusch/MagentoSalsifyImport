@@ -1,0 +1,51 @@
+<?php
+/**
+ * @var $block \Henrique\Salsimport\Block\Adminhtml\Log\View
+ */
+
+use Henrique\Salsimport\Controller\Adminhtml\Log\Index;
+use Henrique\Salsimport\Controller\Adminhtml\Log\Remove;
+
+$log = $block->getLog();
+?>
+
+<?php if ($log): ?>
+    <div class="page-main-actions">
+        <div class="page-actions-placeholder"></div>
+        <div class="page-actions" data-ui-id="page-actions-toolbar-content-header">
+            <div class="page-actions-inner" data-title="<?= __('Salsify log'); ?>">
+                <div class="page-actions-buttons">
+                    <button id="back" title="<?= __('Back') ?>" type="button" class="action- scalable back" onclick="location.href = '<?php echo $block->getUrl(Index::INDEX_URL) ?>';" data-ui-id="back-button">
+                        <span><?php echo __('Go Back') ?></span>
+                    </button>
+
+                    <div title="<?= __('Delete') ?>" class="actions-split delete primary">
+                        <button id="delete-button" title="<?= __('Delete'); ?>>" class="action- scalable delete" onclick="location.href = '<?php echo $block->getUrl(Remove::REMOVE_URL,
+                            ['log_id' => $log['log_id']]) ?>';" data-ui-id="delete-button">
+                            <span><?php echo __('Delete') ?></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="details">
+        <h2><?= __('Details') ?></h2>
+        <div class="steps">
+            <?php if (!empty($log['data']['steps'])): ?>
+                <?php foreach ($log['data']['steps'] as $step): ?>
+                    <p class="step"><?= $step ?></p>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p><?= __('No files processed'); ?></p>
+            <?php endif; ?>
+        </div>
+        <br><br>
+        <?php if (!empty($log['data']['steps'])): ?>
+            <h2><?= __('Final result') ?></h2>
+            <div class="final-result">
+                <p><?= isset($log['data']['resultLog']) ? $log['data']['resultLog'] : ''; ?></p>
+            </div>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>

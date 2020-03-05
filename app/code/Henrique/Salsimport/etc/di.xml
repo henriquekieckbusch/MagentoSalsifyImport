@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Magento\Framework\Console\CommandList">
+		<arguments>
+			<argument name="commands" xsi:type="array">
+				<item name="Import" xsi:type="object">Henrique\Salsimport\Console\Command\Import</item>
+			</argument>
+		</arguments>
+	</type>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="salsify_log_listing_data_source" xsi:type="string">
+                    Henrique\Salsimport\Model\ResourceModel\Collection\Log
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

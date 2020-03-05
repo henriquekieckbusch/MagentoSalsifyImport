@@ -1,0 +1,22 @@
+{
+    "name": "Henrique/module-salsimport",
+    "description": "Import files exported from Salsify",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Henrique Kieckbusch",
+            "email": "hckhenrique@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Henrique\\Salsimport\\": ""
+        }
+    }
+}
